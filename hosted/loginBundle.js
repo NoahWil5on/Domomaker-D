@@ -51,7 +51,7 @@ var LoginWindow = function LoginWindow(props) {
         React.createElement("input", { id: "user", type: "text", name: "username", placeholder: "username" }),
         React.createElement(
             "label",
-            { html: true, "for": "pass" },
+            { htmlFor: "pass" },
             "Password: "
         ),
         React.createElement("input", { id: "pass", type: "password", name: "pass", placeholder: "password" }),
@@ -63,7 +63,7 @@ var SignupWindow = function SignupWindow(props) {
     return React.createElement(
         "form",
         { id: "signupForm", name: "signupForm",
-            onSubmit: handleLogin,
+            onSubmit: handleSignup,
             action: "/signup",
             method: "POST",
             className: "mainForm" },
@@ -75,18 +75,18 @@ var SignupWindow = function SignupWindow(props) {
         React.createElement("input", { id: "user", type: "text", name: "username", placeholder: "username" }),
         React.createElement(
             "label",
-            { html: true, "for": "pass" },
+            { htmlFor: "pass" },
             "Password: "
         ),
         React.createElement("input", { id: "pass", type: "password", name: "pass", placeholder: "password" }),
         React.createElement(
             "label",
-            { html: true, "for": "pass2" },
+            { htmlFor: "pass2" },
             "Password: "
         ),
         React.createElement("input", { id: "pass2", type: "password", name: "pass2", placeholder: "retype password" }),
         React.createElement("input", { type: "hidden", name: "_csrf", value: props.csrf }),
-        React.createElement("input", { className: "formSubmit", type: "submit", value: "Sign in" })
+        React.createElement("input", { className: "formSubmit", type: "submit", value: "Sign up" })
     );
 };
 var createLoginWindow = function createLoginWindow(csrf) {
